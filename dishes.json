@@ -1,0 +1,103 @@
+[{
+		"name": "Mila napolitana con papas",
+		"image": "mila",
+		"stars": 3.5,
+		"minutes": 20,
+		"ingredients": [{
+				"name": "Sliced steaks",
+				"quantity": "4 pieces"
+			},
+			{
+				"name": "Eggs",
+				"quantity": "3"
+			},
+			{
+				"name": "Bread crumbs",
+				"quantity": "2 cups"
+			},
+			{
+				"name": "Love",
+				"quantity": "a lot"
+			}
+		],
+		"steps": [
+			"Gather the ingredients.",
+			"Place the eggs in a shallow bowl or pan, and whisk them together with the oregano and some salt and pepper.",
+			"Stir the parmesan cheese and garlic into the bread crumbs and place them in another shallow pan.",
+			"Dip the steaks first in the egg mixture, then in the bread crumbs, coating them well with the crumbs.",
+			"Heat the olive oil in a heavy skillet, and cook steaks for several minutes on each side, until golden brown and crispy. Drain steaks on paper towels.",
+			"Place steaks on a baking sheet. Turn on oven broiler.",
+			"Top each steak with a slice of ham, 2 to 3 tablespoons tomato sauce, and 1/4 cup grated mozzarella cheese. Sprinkle Italian seasoning over the cheese and place steaks under ​the broiler until cheese melts.",
+			"Serve warm, with fries.",
+			"Enjoy!"
+		]
+	},
+	{
+		"name": "Cheescake",
+		"image": "cheescake",
+		"stars": 5,
+		"minutes": 40,
+		"ingredients": [{
+				"name": "Sliced steaks",
+				"quantity": "4 pieces"
+			},
+			{
+				"name": "Eggs",
+				"quantity": "3"
+			},
+			{
+				"name": "Bread crumbs",
+				"quantity": "2 cups"
+			},
+			{
+				"name": "Love",
+				"quantity": "a lot"
+			}
+		],
+		"steps": [
+			"Gather the ingredients.",
+			"Place the eggs in a shallow bowl or pan, and whisk them together with the oregano and some salt and pepper.",
+			"Stir the parmesan cheese and garlic into the bread crumbs and place them in another shallow pan.",
+			"Dip the steaks first in the egg mixture, then in the bread crumbs, coating them well with the crumbs.",
+			"Heat the olive oil in a heavy skillet, and cook steaks for several minutes on each side, until golden brown and crispy. Drain steaks on paper towels.",
+			"Place steaks on a baking sheet. Turn on oven broiler.",
+			"Top each steak with a slice of ham, 2 to 3 tablespoons tomato sauce, and 1/4 cup grated mozzarella cheese. Sprinkle Italian seasoning over the cheese and place steaks under ​the broiler until cheese melts.",
+			"Serve warm, with fries.",
+			"Enjoy!"
+		]
+	},
+	{
+		"name": "Croissant",
+		"image": "croissant",
+		"stars": 5,
+		"minutes": 120,
+		"ingredients": [{
+				"name": "Sliced steaks",
+				"quantity": "4 pieces"
+			},
+			{
+				"name": "Eggs",
+				"quantity": "3"
+			},
+			{
+				"name": "Bread crumbs",
+				"quantity": "2 cups"
+			},
+			{
+				"name": "Love",
+				"quantity": "a lot"
+			}
+		],
+		"steps": [
+			"Gather the ingredients.",
+			"Place the eggs in a shallow bowl or pan, and whisk them together with the oregano and some salt and pepper.",
+			"Stir the parmesan cheese and garlic into the bread crumbs and place them in another shallow pan.",
+			"Dip the steaks first in the egg mixture, then in the bread crumbs, coating them well with the crumbs.",
+			"Heat the olive oil in a heavy skillet, and cook steaks for several minutes on each side, until golden brown and crispy. Drain steaks on paper towels.",
+			"Place steaks on a baking sheet. Turn on oven broiler.",
+			"Top each steak with a slice of ham, 2 to 3 tablespoons tomato sauce, and 1/4 cup grated mozzarella cheese. Sprinkle Italian seasoning over the cheese and place steaks under ​the broiler until cheese melts.",
+			"Serve warm, with fries.",
+			"Enjoy!"
+		]
+	}
+]
