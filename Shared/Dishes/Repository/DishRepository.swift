@@ -27,7 +27,7 @@ enum RepositoryError: Error {
 
 class DishRepository {
         
-    private let urlString = "https://raw.githubusercontent.com/niguibru/love-eat-json-examples/main/dishes.json"
+    private let urlString = "https://raw.githubusercontent.com/niguibru/love-eat/master/dishes.json"
 
     func getAll() -> AnyPublisher<[Dish], RepositoryError> {
         let request = URLRequest(url: URL(string: urlString)!)
