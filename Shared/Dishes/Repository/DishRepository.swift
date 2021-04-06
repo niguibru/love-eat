@@ -8,6 +8,16 @@
 import Foundation
 import Combine
 
+protocol DishRepository {
+    // var dishListChanged: CurrentValueSubject<[Dish], RepositoryError> { get }
+    func getAll() -> AnyPublisher<[Dish], RepositoryError>
+    func add(_ dish: Dish)
+}
+
+protocol DishDynamicRepository {
+    func startListeningForDishes() -> AnyPublisher<[Dish], RepositoryError>
+}
+
 enum RepositoryError: Error {
     case unknown
     case server
@@ -25,35 +35,3 @@ enum RepositoryError: Error {
     }
 }
 
-class DishRepository {
-        
-    private let urlString = "https://raw.githubusercontent.com/niguibru/love-eat/master/dishes.json"
-
-    func getAll() -> AnyPublisher<[Dish], RepositoryError> {
-        let request = URLRequest(url: URL(string: urlString)!)
-        
-        return URLSession.shared.dataTaskPublisher(for: request)
-            .tryMap { response in
-                guard
-                  let httpURLResponse = response.response as? HTTPURLResponse,
-                  httpURLResponse.statusCode == 200
-                else {
-                    throw RepositoryError.server
-                }
-                return response.data
-            }
-            .decode(type: [Dish].self, decoder: JSONDecoder())
-            .mapError { error in
-                switch error {
-                case is Swift.DecodingError:
-                    return RepositoryError.decoding
-                case let repositoryError as RepositoryError:
-                    return repositoryError
-                default:
-                    return RepositoryError.unknown
-                }
-            }
-            .eraseToAnyPublisher()
-    }
-    
-}
