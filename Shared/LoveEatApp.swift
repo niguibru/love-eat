@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct LoveEatApp: App {
-    @StateObject private var dishListViewModel = DishListViewModel()
+    @StateObject private var dishListViewModel = DishListViewModel(dishRepository: DishGithubRepository())
     
     var body: some Scene {
         WindowGroup {

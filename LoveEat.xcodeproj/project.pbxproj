@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4401B6C4261F5C5C0033E59B /* LoveEatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B6C3261F5C5C0033E59B /* LoveEatUITests.swift */; };
 		446CBE0C261364D40030ACCA /* DishIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE0B261364D40030ACCA /* DishIngredientsView.swift */; };
 		446CBE0D261364D40030ACCA /* DishIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE0B261364D40030ACCA /* DishIngredientsView.swift */; };
 		446CBE18261365670030ACCA /* DishStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE17261365670030ACCA /* DishStepsView.swift */; };
@@ -39,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4401B6C6261F5C5C0033E59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44A15D5C26110FF5001EDCDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44A15D6726110FF8001EDCDD;
+			remoteInfo = "LoveEat (iOS)";
+		};
 		44A15D7926110FF8001EDCDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 44A15D5C26110FF5001EDCDD /* Project object */;
@@ -63,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4401B6C1261F5C5C0033E59B /* LoveEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4401B6C3261F5C5C0033E59B /* LoveEatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveEatUITests.swift; sourceTree = "<group>"; };
+		4401B6C5261F5C5C0033E59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		446CBE0B261364D40030ACCA /* DishIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishIngredientsView.swift; sourceTree = "<group>"; };
 		446CBE17261365670030ACCA /* DishStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepsView.swift; sourceTree = "<group>"; };
 		44A15D6126110FF5001EDCDD /* LoveEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveEatApp.swift; sourceTree = "<group>"; };
@@ -93,6 +104,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4401B6BE261F5C5C0033E59B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44A15D6526110FF8001EDCDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4401B6C2261F5C5C0033E59B /* LoveEatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4401B6C3261F5C5C0033E59B /* LoveEatUITests.swift */,
+				4401B6C5261F5C5C0033E59B /* Info.plist */,
+			);
+			path = LoveEatUITests;
+			sourceTree = "<group>";
+		};
 		446CBDF0261267FD0030ACCA /* Accesory */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +194,7 @@
 				44A15D6A26110FF8001EDCDD /* iOS */,
 				44A15D7126110FF8001EDCDD /* macOS */,
 				44C862FC2614AE1D004CA49A /* LoveEatTests */,
+				4401B6C2261F5C5C0033E59B /* LoveEatUITests */,
 				44A15D8626110FF8001EDCDD /* Tests macOS */,
 				44A15D7B26110FF8001EDCDD /* Tests iOS */,
 				44A15D6926110FF8001EDCDD /* Products */,
@@ -191,6 +219,7 @@
 				44A15D7826110FF8001EDCDD /* Tests iOS.xctest */,
 				44A15D8326110FF8001EDCDD /* Tests macOS.xctest */,
 				44C862FB2614AE1C004CA49A /* LoveEatTests.xctest */,
+				4401B6C1261F5C5C0033E59B /* LoveEatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +300,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4401B6C0261F5C5C0033E59B /* LoveEatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4401B6CA261F5C5C0033E59B /* Build configuration list for PBXNativeTarget "LoveEatUITests" */;
+			buildPhases = (
+				4401B6BD261F5C5C0033E59B /* Sources */,
+				4401B6BE261F5C5C0033E59B /* Frameworks */,
+				4401B6BF261F5C5C0033E59B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4401B6C7261F5C5C0033E59B /* PBXTargetDependency */,
+			);
+			name = LoveEatUITests;
+			productName = LoveEatUITests;
+			productReference = 4401B6C1261F5C5C0033E59B /* LoveEatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		44A15D6726110FF8001EDCDD /* LoveEat (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44A15D9226110FF8001EDCDD /* Build configuration list for PBXNativeTarget "LoveEat (iOS)" */;
@@ -370,6 +417,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					4401B6C0261F5C5C0033E59B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 44A15D6726110FF8001EDCDD;
+					};
 					44A15D6726110FF8001EDCDD = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -410,11 +461,19 @@
 				44A15D7726110FF8001EDCDD /* Tests iOS */,
 				44A15D8226110FF8001EDCDD /* Tests macOS */,
 				44C862FA2614AE1C004CA49A /* LoveEatTests */,
+				4401B6C0261F5C5C0033E59B /* LoveEatUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4401B6BF261F5C5C0033E59B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44A15D6626110FF8001EDCDD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,6 +514,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4401B6BD261F5C5C0033E59B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4401B6C4261F5C5C0033E59B /* LoveEatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44A15D6426110FF8001EDCDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -520,6 +587,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4401B6C7261F5C5C0033E59B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44A15D6726110FF8001EDCDD /* LoveEat (iOS) */;
+			targetProxy = 4401B6C6261F5C5C0033E59B /* PBXContainerItemProxy */;
+		};
 		44A15D7A26110FF8001EDCDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 44A15D6726110FF8001EDCDD /* LoveEat (iOS) */;
@@ -538,6 +610,49 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4401B6C8261F5C5C0033E59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VV24BMX54;
+				INFOPLIST_FILE = LoveEatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = niguibru.LoveEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LoveEat (iOS)";
+			};
+			name = Debug;
+		};
+		4401B6C9261F5C5C0033E59B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VV24BMX54;
+				INFOPLIST_FILE = LoveEatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = niguibru.LoveEatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LoveEat (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		44A15D9026110FF8001EDCDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -879,6 +994,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4401B6CA261F5C5C0033E59B /* Build configuration list for PBXNativeTarget "LoveEatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4401B6C8261F5C5C0033E59B /* Debug */,
+				4401B6C9261F5C5C0033E59B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		44A15D5F26110FF5001EDCDD /* Build configuration list for PBXProject "LoveEat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -25,7 +25,7 @@ enum RepositoryError: Error {
     }
 }
 
-class DishRepository {
+class DishGithubRepository: DishRepository {
         
     private let urlString = "https://raw.githubusercontent.com/niguibru/love-eat/master/dishes.json"
 

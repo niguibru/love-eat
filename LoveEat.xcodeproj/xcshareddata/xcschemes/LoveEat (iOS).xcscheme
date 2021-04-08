@@ -38,6 +38,16 @@
                ReferencedContainer = "container:LoveEat.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4401B6C0261F5C5C0033E59B"
+               BuildableName = "LoveEatUITests.xctest"
+               BlueprintName = "LoveEatUITests"
+               ReferencedContainer = "container:LoveEat.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

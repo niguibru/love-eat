@@ -26,7 +26,7 @@ struct DishCardView: View {
                 stars: dish.stars,
                 minutes: dish.minutes
             )
-                .offset(y: 25)
+            .offset(y: 25)
         }
         .padding(.bottom, 25)
     }

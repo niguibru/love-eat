@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct DishListView: View {
     @ObservedObject var viewModel: DishListViewModel
@@ -23,11 +24,11 @@ struct DishListView: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                 }
+                .accessibility(identifier: "dish-list")
             }
             .navigationTitle("Dishes")
         }
         .accentColor(Color(red: 207/255, green: 172/255, blue: 73/255))
-        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             viewModel.getAll()
         }
@@ -36,7 +37,15 @@ struct DishListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = DishListViewModel(dishes: testDishes)
+        struct DishTestRepository: DishRepository {
+            func getAll() -> AnyPublisher<[Dish], RepositoryError> {
+                return Just(testDishes)
+                    .setFailureType(to: RepositoryError.self)
+                    .eraseToAnyPublisher()
+            }
+        }
+        
+        let viewModel = DishListViewModel(dishRepository: DishTestRepository(), dishes: testDishes)
         return DishListView(viewModel: viewModel)
     }
 }
