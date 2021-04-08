@@ -10,8 +10,8 @@ import Firebase
 
 @main
 struct LoveEatApp: App {
-    @StateObject private var dishListViewModel = DishListViewModel(dishRepository: DishGithubRepository())
-    //@StateObject private var dishListViewModel = DishListViewModel(dishRepository: DishFirebaseRepository())
+    //@StateObject private var dishListViewModel = DishListViewModel(dishRepository: DishGithubRepository())
+    @StateObject private var dishListViewModel = DishListViewModel(dishRepository: DishFirebaseRepository())
     
     init() {
         FirebaseApp.configure()

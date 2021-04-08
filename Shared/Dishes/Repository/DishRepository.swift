@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 protocol DishRepository {
-    // var dishListChanged: CurrentValueSubject<[Dish], RepositoryError> { get }
-    func getAll() -> AnyPublisher<[Dish], RepositoryError>
+    var dishListCurrentValue: CurrentValueSubject<[Dish], RepositoryError> { get }
+    func refreshList()
     func add(_ dish: Dish)
 }
 

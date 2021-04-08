@@ -20,7 +20,7 @@ class DishListViewModel: ObservableObject {
     }
     
     func refreshWithAllDishes() {
-        dishRepository.getAll()
+        dishRepository.dishListCurrentValue
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -35,5 +35,11 @@ class DishListViewModel: ObservableObject {
                 self?.dishes = value
             })
             .store(in: &cancellables)
+
+        dishRepository.refreshList()
+    }
+    
+    func add(dish: Dish) {
+        dishRepository.add(dish)
     }
 }

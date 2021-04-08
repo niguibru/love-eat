@@ -26,6 +26,13 @@ struct DishListView: View {
                 }
             }
             .navigationTitle("Dishes")
+            .toolbar {
+                Button("Add") {
+                    withAnimation{
+                        viewModel.add(dish: testNewDish)
+                    }
+                }
+            }
         }
         .accentColor(Color(red: 207/255, green: 172/255, blue: 73/255))
         .navigationViewStyle(StackNavigationViewStyle())
@@ -38,14 +45,15 @@ struct DishListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         struct DishTestRepository: DishRepository {
-            func getAll() -> AnyPublisher<[Dish], RepositoryError> {
-                return Just(testDishes)
-                    .setFailureType(to: RepositoryError.self)
-                    .eraseToAnyPublisher().eraseToAnyPublisher()
+            var dishList = Array(testDishes.prefix(2))
+            var dishListCurrentValue = CurrentValueSubject<[Dish], RepositoryError>([])
+            
+            func refreshList() {
+                dishListCurrentValue.send(dishList)
             }
             
             func add(_ dish: Dish) {
-                // TODO: not implemented
+                dishListCurrentValue.value.append(dish)
             }
         }
         

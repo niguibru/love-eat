@@ -11,20 +11,19 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 final class DishFirebaseRepository: DishRepository {
+    var dishListCurrentValue = CurrentValueSubject<[Dish], RepositoryError>([])
 
     private let path = "dishes"
     private let firestore: Firestore
     
-    private var dishListChanged = CurrentValueSubject<[Dish], RepositoryError>([])
     private var isListeningForUpdates = false
     
     init(firestore: Firestore = Firestore.firestore()) {
         self.firestore = firestore
     }
     
-    func getAll() -> AnyPublisher<[Dish], RepositoryError> {
+    func refreshList() {
         if !isListeningForUpdates { startListeningForUpdates() }
-        return dishListChanged.eraseToAnyPublisher()
     }
 
     private func startListeningForUpdates() {
@@ -34,9 +33,9 @@ final class DishFirebaseRepository: DishRepository {
             }
             
             if let items = snapshot?.documents.compactMap({ try? $0.data(as: Dish.self) }) {
-                self?.dishListChanged.send(items)
+                self?.dishListCurrentValue.send(items)
             } else {
-                self?.dishListChanged.send([])
+                self?.dishListCurrentValue.send([])
             }
         }
         isListeningForUpdates = true

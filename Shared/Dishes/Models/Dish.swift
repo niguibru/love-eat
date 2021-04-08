@@ -72,3 +72,11 @@ let testDishes: [Dish] = [
     ], steps: []),
 ]
 
+let testNewDish: Dish = Dish(
+    name: "New Cheescake",
+    image: "cheescake",
+    stars: 5,
+    minutes: 60,
+    ingredients: [],
+    steps: []
+)

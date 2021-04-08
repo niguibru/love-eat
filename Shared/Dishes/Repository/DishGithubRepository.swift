@@ -9,17 +9,25 @@ import Foundation
 import Combine
 
 class DishGithubRepository: DishRepository {
-
+    var dishListCurrentValue = CurrentValueSubject<[Dish], RepositoryError>([])
+    
     private let urlString = "https://raw.githubusercontent.com/niguibru/love-eat/master/dishes.json"
 
-    func getAll() -> AnyPublisher<[Dish], RepositoryError> {
+    private var cancellables: Set<AnyCancellable> = []
+    
+    func refreshList() {
         let request = URLRequest(url: URL(string: urlString)!)
         
-        return URLSession.shared.dataTaskPublisher(for: request)
+        URLSession.shared.dataTaskPublisher(for: request)
             .tryMap { response in try DishGithubRepository.checkForServerError(response: response) }
             .decode(type: [Dish].self, decoder: JSONDecoder())
             .mapError { error in DishGithubRepository.mapErrors(error: error) }
-            .eraseToAnyPublisher()
+            .sink { [weak self] completion in
+                self?.dishListCurrentValue.send(completion: completion)
+            } receiveValue: { [weak self] dishes in
+                self?.dishListCurrentValue.send(dishes)
+            }
+            .store(in: &cancellables)
     }
     
     private static func mapErrors(error: Error) -> RepositoryError {
@@ -44,6 +52,6 @@ class DishGithubRepository: DishRepository {
     }
     
     func add(_ dish: Dish) {
-        // TODO: not implemented
+        dishListCurrentValue.value.append(dish)
     }
 }
