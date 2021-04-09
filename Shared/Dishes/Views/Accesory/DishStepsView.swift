@@ -21,10 +21,7 @@ struct DishStepsView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .padding(.bottom, 4)
-            }
-            
-            HStack {
-                Spacer()
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .padding(.horizontal, 16)
