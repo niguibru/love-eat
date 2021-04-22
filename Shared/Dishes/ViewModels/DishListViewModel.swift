@@ -10,6 +10,7 @@ import Combine
 
 class DishListViewModel: ObservableObject {
     @Published private (set) var dishes: [Dish] = []
+    @Published private (set) var errorMessage: String?
     
     private let dishRepository: DishRepository
     
@@ -22,11 +23,12 @@ class DishListViewModel: ObservableObject {
     func refreshWithAllDishes() {
         dishRepository.dishListCurrentValue
             .receive(on: RunLoop.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     // For now I'm just printing the error
                     print(error.localizedDescription)
+                    self?.errorMessage = error.localizedDescription
                 case .finished:
                     print("finished")
                     break

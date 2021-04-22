@@ -15,6 +15,14 @@
 		4401B682261796CC0033E59B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4401B681261796CC0033E59B /* FirebaseFirestoreSwift-Beta */; };
 		4401B6892617974C0033E59B /* DishGithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B6882617974C0033E59B /* DishGithubRepository.swift */; };
 		4401B68A2617974C0033E59B /* DishGithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B6882617974C0033E59B /* DishGithubRepository.swift */; };
+		4401B700262888530033E59B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B6E8262887F00033E59B /* LoginView.swift */; };
+		4401B706262888660033E59B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B6E8262887F00033E59B /* LoginView.swift */; };
+		4401B70D262888CE0033E59B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4401B70C262888CE0033E59B /* FirebaseAuth */; };
+		4401B70F262888E30033E59B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B70E262888E30033E59B /* SignUpViewModel.swift */; };
+		4401B725262987A80033E59B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B70E262888E30033E59B /* SignUpViewModel.swift */; };
+		4401B731262989160033E59B /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B730262989160033E59B /* SignUpUseCase.swift */; };
+		4401B7382629896D0033E59B /* SignUpUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4401B7372629896D0033E59B /* SignUpUseCaseTest.swift */; };
+		440C5CA5262E0AEA00F31833 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440C5CA4262E0AEA00F31833 /* SignUpViewModel.swift */; };
 		446CBE0C261364D40030ACCA /* DishIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE0B261364D40030ACCA /* DishIngredientsView.swift */; };
 		446CBE0D261364D40030ACCA /* DishIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE0B261364D40030ACCA /* DishIngredientsView.swift */; };
 		446CBE18261365670030ACCA /* DishStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446CBE17261365670030ACCA /* DishStepsView.swift */; };
@@ -74,6 +82,11 @@
 		4401B66E261795910033E59B /* DishFirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishFirebaseRepository.swift; sourceTree = "<group>"; };
 		4401B676261796540033E59B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4401B6882617974C0033E59B /* DishGithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishGithubRepository.swift; sourceTree = "<group>"; };
+		4401B6E8262887F00033E59B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4401B70E262888E30033E59B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		4401B730262989160033E59B /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
+		4401B7372629896D0033E59B /* SignUpUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCaseTest.swift; sourceTree = "<group>"; };
+		440C5CA4262E0AEA00F31833 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		446CBE0B261364D40030ACCA /* DishIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishIngredientsView.swift; sourceTree = "<group>"; };
 		446CBE17261365670030ACCA /* DishStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepsView.swift; sourceTree = "<group>"; };
 		44A15D6126110FF5001EDCDD /* LoveEatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveEatApp.swift; sourceTree = "<group>"; };
@@ -109,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4401B680261796BC0033E59B /* FirebaseFirestore in Frameworks */,
+				4401B70D262888CE0033E59B /* FirebaseAuth in Frameworks */,
 				4401B682261796CC0033E59B /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +163,65 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4401B6E7262887C70033E59B /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				4401B71A2629879A0033E59B /* UseCases */,
+				4401B6FA2628880E0033E59B /* Services */,
+				4401B6F4262887FF0033E59B /* UI */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		4401B6F4262887FF0033E59B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4401B70E262888E30033E59B /* SignUpViewModel.swift */,
+				4401B6E8262887F00033E59B /* LoginView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4401B6FA2628880E0033E59B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4401B71A2629879A0033E59B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4401B730262989160033E59B /* SignUpUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		4401B73E262989710033E59B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4401B7372629896D0033E59B /* SignUpUseCaseTest.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		440C5CA2262E0AB000F31833 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				4401B73E262989710033E59B /* UseCases */,
+				440C5CA3262E0ABE00F31833 /* UI */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		440C5CA3262E0ABE00F31833 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				440C5CA4262E0AEA00F31833 /* SignUpViewModel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		446CBDF0261267FD0030ACCA /* Accesory */ = {
@@ -199,6 +272,7 @@
 			children = (
 				4401B676261796540033E59B /* GoogleService-Info.plist */,
 				44A15DCF26122FBE001EDCDD /* Dishes */,
+				4401B6E7262887C70033E59B /* Registration */,
 				44A15D6126110FF5001EDCDD /* LoveEatApp.swift */,
 				44A15D6326110FF8001EDCDD /* Assets.xcassets */,
 			);
@@ -286,6 +360,7 @@
 		44C862FC2614AE1D004CA49A /* LoveEatTests */ = {
 			isa = PBXGroup;
 			children = (
+				440C5CA2262E0AB000F31833 /* Registration */,
 				44C862FD2614AE1D004CA49A /* LoveEatTests.swift */,
 				44C862FF2614AE1D004CA49A /* Info.plist */,
 			);
@@ -311,6 +386,7 @@
 			packageProductDependencies = (
 				4401B67F261796BC0033E59B /* FirebaseFirestore */,
 				4401B681261796CC0033E59B /* FirebaseFirestoreSwift-Beta */,
+				4401B70C262888CE0033E59B /* FirebaseAuth */,
 			);
 			productName = "LoveEat (iOS)";
 			productReference = 44A15D6826110FF8001EDCDD /* LoveEat.app */;
@@ -490,7 +566,10 @@
 			files = (
 				44A15DA72611FC5B001EDCDD /* Dish.swift in Sources */,
 				44A15DD5261230BE001EDCDD /* DishDetailView.swift in Sources */,
+				4401B731262989160033E59B /* SignUpUseCase.swift in Sources */,
 				4401B66F261795910033E59B /* DishFirebaseRepository.swift in Sources */,
+				4401B700262888530033E59B /* LoginView.swift in Sources */,
+				4401B70F262888E30033E59B /* SignUpViewModel.swift in Sources */,
 				446CBE18261365670030ACCA /* DishStepsView.swift in Sources */,
 				4401B6892617974C0033E59B /* DishGithubRepository.swift in Sources */,
 				446CBE0C261364D40030ACCA /* DishIngredientsView.swift in Sources */,
@@ -512,6 +591,8 @@
 				44A15DA82611FC5B001EDCDD /* Dish.swift in Sources */,
 				44A15DD6261230BE001EDCDD /* DishDetailView.swift in Sources */,
 				4401B670261795910033E59B /* DishFirebaseRepository.swift in Sources */,
+				4401B706262888660033E59B /* LoginView.swift in Sources */,
+				4401B725262987A80033E59B /* SignUpViewModel.swift in Sources */,
 				446CBE19261365670030ACCA /* DishStepsView.swift in Sources */,
 				4401B68A2617974C0033E59B /* DishGithubRepository.swift in Sources */,
 				446CBE0D261364D40030ACCA /* DishIngredientsView.swift in Sources */,
@@ -547,6 +628,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C862FE2614AE1D004CA49A /* LoveEatTests.swift in Sources */,
+				440C5CA5262E0AEA00F31833 /* SignUpViewModel.swift in Sources */,
+				4401B7382629896D0033E59B /* SignUpUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1072,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4401B6642617954D0033E59B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		4401B70C262888CE0033E59B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4401B6642617954D0033E59B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
